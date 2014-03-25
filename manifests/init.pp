@@ -1,6 +1,9 @@
 class tomcat7 (
     $catalina_base = '/var/lib/tomcat7',
-    $vhosts = []) {
+    $vhosts        = [],
+    $enable_ajp    = false,
+    $ajp_port      = 8009,
+) {
 
   package { 'tomcat7':
     ensure => latest,
